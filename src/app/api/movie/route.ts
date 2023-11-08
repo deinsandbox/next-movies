@@ -2,12 +2,12 @@ import { type NextRequest, NextResponse } from 'next/server'
 
 export async function GET(req: NextRequest) {
   try {
-    const { TMDB_URL, TMDB_READ_KEY } = process?.env ?? {}
+    const { TMDB_API, TMDB_READ_KEY } = process?.env ?? {}
 
     const searchParams = req.nextUrl.searchParams
     const page = searchParams.get('page') ?? 1
 
-    if (!TMDB_URL || !TMDB_READ_KEY) {
+    if (!TMDB_API || !TMDB_READ_KEY) {
       throw new Error('Missing TMDB environment variables')
     }
 
@@ -15,7 +15,7 @@ export async function GET(req: NextRequest) {
     headers.append('accept', 'application/json')
     headers.append('Authorization', `Bearer ${TMDB_READ_KEY}`)
 
-    const url = new URL(`movie/top_rated`, TMDB_URL)
+    const url = new URL(`movie/top_rated`, TMDB_API)
     url.searchParams.set('language', 'en-US')
     url.searchParams.set('page', `${page}`)
 
