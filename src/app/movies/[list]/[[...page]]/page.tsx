@@ -1,4 +1,5 @@
-import { Pagination } from '@/app/components/Pagination'
+import { Navigation } from '@/app/movies/components/Navigation'
+import { Pagination } from '@/app/movies/components/Pagination'
 import { getMovies } from '@/services/movies'
 import { List, type MoviesResponse } from '@/types/TMDB.type'
 
@@ -17,6 +18,7 @@ const Movie = async ({ params }: Props) => {
 
   return (
     <>
+      <Navigation />
       <Pagination
         list={list}
         current={response?.data?.page ?? 1}

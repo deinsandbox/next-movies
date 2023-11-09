@@ -44,11 +44,15 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 ### Next.js
 
 - [Configuring: ESLint](https://nextjs.org/docs/pages/building-your-application/configuring/eslint)
+
+#### Routing
+
 - [API Routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes)
 - [Page](https://nextjs.org/docs/app/api-reference/file-conventions/page)
 - [Route](https://nextjs.org/docs/app/api-reference/file-conventions/route)
 - [useRouter](https://nextjs.org/docs/app/api-reference/functions/use-router)
 - [useSearchParams](https://nextjs.org/docs/app/api-reference/functions/use-search-params)
+- [Link](https://nextjs.org/docs/app/building-your-application/routing/linking-and-navigating)
 
 #### Loading
 
