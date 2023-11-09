@@ -59,3 +59,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - [Loading](https://nextjs.org/docs/app/api-reference/file-conventions/loading)
 - [LoadingUI](https://nextjs.org/docs/app/building-your-application/routing/loading-ui-and-streaming)
 - [Using loading.js and Suspense in Next 13](https://dev.to/peterlidee/using-loadingjs-and-suspense-in-next-13-1n7g)
+
+#### Metadata
+
+- [Metadata](https://nextjs.org/docs/app/building-your-application/optimizing/metadata)

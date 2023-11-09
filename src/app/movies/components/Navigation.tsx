@@ -2,26 +2,7 @@
 
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
-import { List } from '@/types/TMDB.type'
-
-const movieLinks: { name: string; href: List }[] = [
-  {
-    name: 'Now Playing',
-    href: 'now_playing',
-  },
-  {
-    name: 'Top Rated',
-    href: 'top_rated',
-  },
-  {
-    name: 'Popular',
-    href: 'popular',
-  },
-  {
-    name: 'Upcoming',
-    href: 'upcoming',
-  },
-]
+import { movieLinks } from '@/data/movies'
 
 export const Navigation = () => {
   const pathname = usePathname()
