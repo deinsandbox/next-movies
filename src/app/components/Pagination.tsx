@@ -15,14 +15,14 @@ export const Pagination = ({
     <>
       <button
         type="button"
-        onClick={() => router.push(`./1`, { scroll: true })}
+        onClick={() => router.push(`/movies/1`, { scroll: true })}
         disabled={current === 1}
       >
         First
       </button>
       <button
         type="button"
-        onClick={() => router.push(`./${current - 1}`, { scroll: true })}
+        onClick={() => router.push(`/movies/${current - 1}`, { scroll: true })}
         disabled={current === 1}
       >
         Prev
@@ -32,14 +32,14 @@ export const Pagination = ({
       </span>
       <button
         type="button"
-        onClick={() => router.push(`./${current + 1}`, { scroll: true })}
+        onClick={() => router.push(`/movies/${current + 1}`, { scroll: true })}
         disabled={current === total}
       >
         Next
       </button>
       <button
         type="button"
-        onClick={() => router.push(`./${total}`, { scroll: true })}
+        onClick={() => router.push(`/movies/${total}`, { scroll: true })}
         disabled={current === total}
       >
         Last
