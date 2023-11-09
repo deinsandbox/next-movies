@@ -41,3 +41,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 - [API Routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes)
 - [Page](https://nextjs.org/docs/app/api-reference/file-conventions/page)
 - [Route](https://nextjs.org/docs/app/api-reference/file-conventions/route)
+- [useRouter](https://nextjs.org/docs/pages/api-reference/functions/use-router)
+- [Loading](https://nextjs.org/docs/app/api-reference/file-conventions/loading)
+- [LoadingUI](https://nextjs.org/docs/app/building-your-application/routing/loading-ui-and-streaming)
