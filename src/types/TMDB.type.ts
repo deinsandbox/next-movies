@@ -1,20 +1,27 @@
-export type MoviesResponse = {
-  ok: true
-  status: number
-  data: MovieResult
-} | {
-  ok: false
-  status: number
-  data: MovieError
-} | {
-  ok: false
-  status: number
-  data: {}
-}
+export type MoviesResponse =
+  | {
+      ok: true
+      status: number
+      data: MovieResult
+    }
+  | {
+      ok: false
+      status: number
+      data: MovieError
+    }
+  | {
+      ok: false
+      status: number
+      data: {}
+    }
 
 export type MoviesData = MovieResult | MovieError
 
 type MovieResult = {
+  dates?: {
+    maximum: string
+    minimum: string
+  }
   page: number
   results: Movie[]
   total_pages: number
@@ -43,3 +50,5 @@ type Movie = {
   vote_average: number
   vote_count: number
 }
+
+export type List = 'now_playing' | 'top_rated' | 'popular' | 'upcoming'

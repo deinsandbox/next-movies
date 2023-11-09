@@ -1,4 +1,6 @@
-export const getMovies = async (page: number) => {
+import { List } from '@/types/TMDB.type'
+
+export const getMovies = async (list: List, page: number) => {
   const { API_URL } = process?.env ?? {}
 
   if (!API_URL) {
@@ -13,7 +15,7 @@ export const getMovies = async (page: number) => {
     headers,
   }
 
-  const url = new URL('movies', API_URL)
+  const url = new URL(`movies/${list}`, API_URL)
   if (page) {
     url.searchParams.set('page', `${page}`)
   }

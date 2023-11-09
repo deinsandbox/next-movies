@@ -37,10 +37,21 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## Documentation
 
+### Movies
+
+- [API](https://developer.themoviedb.org/reference/intro/getting-started)
+
+### Next.js
+
 - [Configuring: ESLint](https://nextjs.org/docs/pages/building-your-application/configuring/eslint)
 - [API Routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes)
 - [Page](https://nextjs.org/docs/app/api-reference/file-conventions/page)
 - [Route](https://nextjs.org/docs/app/api-reference/file-conventions/route)
-- [useRouter](https://nextjs.org/docs/pages/api-reference/functions/use-router)
+- [useRouter](https://nextjs.org/docs/app/api-reference/functions/use-router)
+- [useSearchParams](https://nextjs.org/docs/app/api-reference/functions/use-search-params)
+
+#### Loading
+
 - [Loading](https://nextjs.org/docs/app/api-reference/file-conventions/loading)
 - [LoadingUI](https://nextjs.org/docs/app/building-your-application/routing/loading-ui-and-streaming)
+- [Using loading.js and Suspense in Next 13](https://dev.to/peterlidee/using-loadingjs-and-suspense-in-next-13-1n7g)

@@ -1,12 +1,14 @@
-import { MoviesData } from '@/types/TMDB.type'
+import { List, MoviesData } from '@/types/TMDB.type'
 import { type NextRequest, NextResponse } from 'next/server'
 
-const get = async (req: NextRequest) => {
+const get = async (req: NextRequest, context: { params: { list: List } }) => {
   try {
     const { TMDB_API, TMDB_READ_KEY } = process?.env ?? {}
 
     const searchParams = req.nextUrl.searchParams
     const page = searchParams.get('page') ?? 1
+
+    const { list = 'top_rated' } = context?.params ?? {}
 
     if (!TMDB_API || !TMDB_READ_KEY) {
       throw new Error('Missing TMDB environment variables')
@@ -21,11 +23,13 @@ const get = async (req: NextRequest) => {
       headers,
     }
 
-    const url = new URL('movie/top_rated', TMDB_API)
+    const url = new URL(`movie/${list}`, TMDB_API)
     url.searchParams.set('language', 'en-US')
     url.searchParams.set('page', `${page}`)
 
-    const result: MoviesData = await fetch(url.toString(), options).then((res) => res.json())
+    const result: MoviesData = await fetch(url.toString(), options).then(
+      (res) => res.json()
+    )
 
     if ('success' in result && !result?.success) {
       console.error('API Movies Error: ', result)
@@ -35,7 +39,10 @@ const get = async (req: NextRequest) => {
     return NextResponse.json(result, { status: 200 })
   } catch (error) {
     console.error('API Movies Error: ', error)
-    return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 })
+    return NextResponse.json(
+      { error: 'Internal Server Error' },
+      { status: 500 }
+    )
   }
 }
 
