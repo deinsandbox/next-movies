@@ -43,6 +43,7 @@
         "source.fixAll.eslint": true
     },
     "cSpell.words": [
+        "tmdb",
         "TMDB"
     ]
 }
