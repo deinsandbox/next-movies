@@ -37,7 +37,7 @@ const Movie = async ({ params }: Props) => {
 
   return (
     <>
-      <h1>{title.name}</h1>
+      <h1>Movies: {title.name}</h1>
 
       <Navigation />
 
@@ -52,6 +52,12 @@ const Movie = async ({ params }: Props) => {
           return <MovieCard key={movie.id} movie={movie} />
         })}
       </section>
+
+      <Pagination
+        list={list}
+        current={response?.data?.page ?? 1}
+        total={response?.data?.total_pages}
+      ></Pagination>
     </>
   )
 }

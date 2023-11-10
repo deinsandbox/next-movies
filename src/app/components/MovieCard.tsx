@@ -2,6 +2,8 @@ import { Movie } from '@/types/TMDB.type'
 import React from 'react'
 import Image from 'next/image'
 
+import './MovieCard.css'
+
 type Props = {
   movie: Movie
 }
@@ -21,21 +23,23 @@ export const MovieCard = ({ movie }: Props) => {
 
   return (
     <>
-      <Image
-        src={imgUrl.toString()}
-        alt={movie.title}
-        className="movie-poster"
-        width={220}
-        height={330}
-        priority
-      />
-      <div className="movie-rating">{`⭐ ${rating}`}</div>
-      <div className="movie-name">{movie.title}</div>
-      <div className="movie-overview">{movie.overview}</div>
-
-      {/* <pre>
-        <code>{JSON.stringify(movie, null, 2)}</code>
-      </pre> */}
+      <article className="movie-card">
+        <Image
+          src={imgUrl.toString()}
+          alt={movie.title}
+          className="movie-poster"
+          width={220}
+          height={330}
+          blurDataURL="/img/dummy/poster.svg"
+          priority
+        />
+        <div className="movie-rating">{`⭐ ${rating}`}</div>
+        <div className="movie-name">{movie.title}</div>
+        <div className="movie-overview">{movie.overview}</div>
+        {/* <pre>
+          <code>{JSON.stringify(movie, null, 2)}</code>
+        </pre> */}
+      </article>
     </>
   )
 }
