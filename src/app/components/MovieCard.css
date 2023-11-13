@@ -61,7 +61,8 @@
         flex-direction: row;
         max-width: 100%;
         justify-content: space-around;
-        gap: 1rem;
+        gap:
+        1rem;
     }
 
     .movie-poster {
