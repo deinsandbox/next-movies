@@ -37,9 +37,11 @@ const Movie = async ({ params }: Props) => {
 
   return (
     <>
-      <h1>Movies: {title.name}</h1>
+      <header>
+        <Navigation />
+      </header>
 
-      <Navigation />
+      <h1>Movie List: {title.name}</h1>
 
       <Pagination
         list={list}

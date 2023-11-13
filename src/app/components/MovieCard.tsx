@@ -5,7 +5,10 @@ import Image from 'next/image'
 import './MovieCard.css'
 
 type Props = {
-  movie: Movie
+  movie: Pick<
+    Movie,
+    'title' | 'poster_path' | 'release_date' | 'vote_average' | 'overview'
+  >
 }
 
 export const MovieCard = ({ movie }: Props) => {
@@ -21,24 +24,29 @@ export const MovieCard = ({ movie }: Props) => {
     rating = movie.vote_average.toFixed(1)
   }
 
+  const date = new Date(movie.release_date).toLocaleDateString(undefined, {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  })
+
   return (
     <>
-      <article className="movie-card">
+      <article className="movie-card movie-card_format">
         <Image
           src={imgUrl.toString()}
           alt={movie.title}
           className="movie-poster"
           width={220}
           height={330}
-          blurDataURL="/img/dummy/poster.svg"
           priority
         />
-        <div className="movie-rating">{`⭐ ${rating}`}</div>
-        <div className="movie-name">{movie.title}</div>
-        <div className="movie-overview">{movie.overview}</div>
-        {/* <pre>
-          <code>{JSON.stringify(movie, null, 2)}</code>
-        </pre> */}
+        <div className="movie-description">
+          <div className="movie-rating">{`⭐ ${rating}`}</div>
+          <div className="movie-name">{movie.title}</div>
+          <div className="movie-date">{date}</div>
+          <div className="movie-overview">{movie.overview}</div>
+        </div>
       </article>
     </>
   )
