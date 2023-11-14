@@ -29,8 +29,10 @@
     box-shadow: 3px 3px 17px 3px rgba(var(--card-border-rgb), 0.30);
 }
 
-.movie-card_format:hover span {
-    transform: translateX(4px);
+.movie-card_format:hover {
+    transform: translateX(3px);
+    transition-duration: 400ms; /* decrease or increase the duration as desired */
+    transition-timing-function: ease-in-out;
 }
 
 .movie-poster {
