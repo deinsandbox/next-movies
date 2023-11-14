@@ -45,15 +45,15 @@
 
 .movie-icon {
     position: relative;
-    top: -4rem;
-    right: 0.25rem;
+    top: -20.75rem;
+    right: -1rem;
     filter: drop-shadow(0.1rem 0.1rem 0.1rem rgb(var(--background-start-rgb)));
 }
 
 .movie-value {
     position: relative;
-    top: -2.68rem;
-    right: -3.15rem;
+    top: -19.45rem;
+    right: -4.3rem;
     color: rgb(var(--background-start-rgb));
     font-weight: bolder;
     width: 3rem;
