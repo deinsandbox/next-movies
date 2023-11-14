@@ -21,7 +21,7 @@ export const MovieCard = ({ movie }: Props) => {
 
   let rating: string = 'NR'
   if (movie.vote_average) {
-    rating = movie.vote_average.toFixed(1)
+    rating = `${parseFloat(movie.vote_average.toFixed(1))}`
   }
 
   const date = new Date(movie.release_date).toLocaleDateString(undefined, {
@@ -42,7 +42,17 @@ export const MovieCard = ({ movie }: Props) => {
           priority
         />
         <div className="movie-description">
-          <div className="movie-rating">{`⭐ ${rating}`}</div>
+          <div className="movie-rating">
+            <div className="movie-icon">
+              <Image
+                alt="start rating"
+                src="/img/ui/star.svg"
+                width="60"
+                height="60"
+              />
+            </div>
+            <div className="movie-value">{rating}</div>
+          </div>
           <div className="movie-name">{movie.title}</div>
           <div className="movie-date">{date}</div>
           <div className="movie-overview">{movie.overview}</div>
