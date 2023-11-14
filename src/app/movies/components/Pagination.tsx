@@ -18,6 +18,13 @@ export const Pagination = ({
     <>
       <button
         type="button"
+        onClick={() => router.push('/')}
+      >
+        Home
+      </button>
+{" "}
+      <button
+        type="button"
         onClick={() => router.push(`/movies/${list}/1`, { scroll: true })}
         disabled={current === 1}
       >
