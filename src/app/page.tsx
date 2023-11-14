@@ -30,8 +30,6 @@ export default function Home() {
               key={link.href}
               href={`/movies/${link.href}`}
               className={styles.card}
-              target="_blank"
-              rel="noopener noreferrer"
             >
               <h2>
                 {link.name} <span>-&gt;</span>
