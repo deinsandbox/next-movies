@@ -125,6 +125,7 @@
     .movie-value {
         color: rgb(var(--foreground-rgb));
         font-weight: normal;
+        width: auto;
     }
 
     .movie-date {
