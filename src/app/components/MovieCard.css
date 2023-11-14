@@ -25,6 +25,8 @@
 .movie-card_format:hover {
     background: rgba(var(--card-rgb), 0.1);
     border: 1px solid rgba(var(--card-border-rgb), 0.30);
+    transform: translateY(-0.25rem);
+    box-shadow: 3px 3px 17px 3px rgba(var(--card-border-rgb), 0.30);
 }
 
 .movie-card_format:hover span {
