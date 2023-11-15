@@ -55,6 +55,9 @@
   --nav-hover: var(--indigo-500);
   --nav-active: var(--indigo-400);
   --nav-active-border: var(--indigo-200);
+
+  --text-primary: var(--indigo-050);
+  --text-secondary: var(--indigo-950)
 }
 
 @media (prefers-color-scheme: dark) {

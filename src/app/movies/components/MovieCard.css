@@ -58,7 +58,7 @@
     position: relative;
     top: -19.45rem;
     right: -4.7rem;
-    color: rgb(var(--background-start-rgb));
+    color: var(--text-secondary);
     font-weight: bolder;
     width: 3.6rem;
     text-align: center;

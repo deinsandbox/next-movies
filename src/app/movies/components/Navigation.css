@@ -42,7 +42,7 @@ nav {
     pointer-events: none;
 }
 
-@media screen and (width < 600px) {
+@media screen and (width < 800px) {
     .menu li {
         flex-basis: 50%;
     }
