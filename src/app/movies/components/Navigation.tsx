@@ -4,19 +4,21 @@ import { usePathname } from 'next/navigation'
 import Link from 'next/link'
 import { movieLinks } from '@/data/movies'
 
+import './Navigation.css'
+
 export const Navigation = () => {
   const pathname = usePathname()
 
   return (
     <>
       <nav>
-        <ul>
+        <ul className="menu">
           {movieLinks.map((link) => {
             return (
               <li key={link.href}>
                 <Link
-                  className={`link ${
-                    pathname === `/movies/${link.href}` ? 'active' : ''
+                  className={`${
+                    pathname.startsWith(`/movies/${link.href}`) ? 'active' : ''
                   }`}
                   href={`/movies/${link.href}`}
                 >

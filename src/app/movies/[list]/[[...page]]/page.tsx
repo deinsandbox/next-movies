@@ -4,7 +4,7 @@ import { Pagination } from '@/app/movies/components/Pagination'
 import { getMovies } from '@/services/movies'
 import { List, type MoviesResponse } from '@/types/TMDB.type'
 import { movieLinks } from '@/data/movies'
-import { MovieCard } from '@/app/components/MovieCard'
+import { MovieCard } from '@/app/movies/components/MovieCard'
 
 import './page.css'
 
