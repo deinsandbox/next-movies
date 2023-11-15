@@ -13,6 +13,12 @@ export const Navigation = () => {
     <>
       <nav>
         <ul className="menu">
+          <li>
+            <Link href="/" className="home">
+              Home
+            </Link>
+          </li>
+
           {movieLinks.map((link) => {
             return (
               <li key={link.href}>

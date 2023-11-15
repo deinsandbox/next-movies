@@ -8,7 +8,14 @@ export default function Home() {
       <div className={styles.description}>
         <p>
           Next project to explore routing and SSR using{' '}
-          <strong>The Movie DB</strong>&apos;s API.
+          <a
+            href="https://developer.themoviedb.org/reference"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            The Movie DB
+          </a>
+          &apos;s API.
         </p>
       </div>
 

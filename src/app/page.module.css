@@ -8,9 +8,6 @@
 }
 
 .description {
-  display: inherit;
-  justify-content: inherit;
-  align-items: inherit;
   font-size: 0.85rem;
   max-width: var(--max-width);
   width: 100%;
@@ -18,25 +15,14 @@
   font-family: var(--font-mono);
 }
 
-.description a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0.5rem;
-}
-
 .description p {
+  display: block;
   position: relative;
   margin: 0;
   padding: 1rem;
   background-color: rgba(var(--callout-rgb), 0.5);
   border: 1px solid rgba(var(--callout-border-rgb), 0.3);
   border-radius: var(--border-radius);
-}
-
-.code {
-  font-weight: 700;
-  font-family: var(--font-mono);
 }
 
 .grid {
@@ -159,20 +145,15 @@
     font-size: 0.8rem;
   }
 
-  .description a {
-    padding: 1rem;
-  }
-
   .description p,
   .description div {
-    display: flex;
-    justify-content: center;
+    display: block;
     position: fixed;
     width: 100%;
   }
 
   .description p {
-    align-items: center;
+    text-align: center;
     inset: 0 0 auto;
     padding: 2rem 1rem 1.4rem;
     border-radius: 0;

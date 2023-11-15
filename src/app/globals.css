@@ -39,22 +39,22 @@
   --card-rgb: 180, 185, 188;
   --card-border-rgb: 131, 134, 135;
 
-  --lime-050: #f7fee7;
-  --lime-100: #ecfccb;
-  --lime-200: #d9f99d;
-  --lime-300: #bef264;
-  --lime-400: #a3e635;
-  --lime-500: #84cc16;
-  --lime-600: #65a30d;
-  --lime-700: #4d7c0f;
-  --lime-800: #3f6212;
-  --lime-900: #365314;
-  --lime-950: #1a2e05;
+  --indigo-050: #eef2ff;
+  --indigo-100: #e0e7ff;
+  --indigo-200: #c7d2fe;
+  --indigo-300: #a5b4fc;
+  --indigo-400: #818cf8;
+  --indigo-500: #6366f1;
+  --indigo-600: #4f46e5;
+  --indigo-700: #4338ca;
+  --indigo-800: #3730a3;
+  --indigo-900: #312e81;
+  --indigo-950: #1e1b4b;
 
-  --nav-menu: var(--lime-900);
-  --nav-hover: var(--lime-500);
-  --nav-active: var(--lime-400);
-  --nav-active-border: var(--lime-200);
+  --nav-menu: var(--indigo-900);
+  --nav-hover: var(--indigo-500);
+  --nav-active: var(--indigo-400);
+  --nav-active-border: var(--indigo-200);
 }
 
 @media (prefers-color-scheme: dark) {
